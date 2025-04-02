@@ -1,0 +1,18 @@
+/* colors.css */
+
+:root {
+  --primary-color: #4167D9;
+  --accent-color: #1AD9C6;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}

@@ -1,0 +1,1 @@
+simulates joining an unfamiliar codebase with helpful comments.
