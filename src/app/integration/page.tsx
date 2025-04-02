@@ -2,16 +2,33 @@
 
 import React, { useState } from 'react';
 import IntegrationTodos from './components/todos';
+import CompletionGif from "@public/ghcp-comment-completion.gif"
+import Image from 'next/image';
+
+const Instructions = () => {
+  return (
+  <div>
+    <h1 className="text-primary text-lg mt-5">Integration in the IDE</h1>
+    <p>Go to the source code and implement the reversed input function in <span className='bg-dark font-mono text-sm text-gray-500'>src/app/integration/page.tsx</span></p>
+    <p className='mt-3 text-md font-bold'>Use comments and try to use autocomplete to achieve the desired outcome.</p>
+    <IntegrationTodos /> 
+  </div>
+  )
+}
 
 export default function IntegrationPage() {
+  // State to hold the displayed message.
+   
+  
+  // State to hold the user input
+
+  // Function to handle input change
+
+  // Function to handle button click
+
   return (
     <div>
-      <div className=''>
-        <h1 className="text-primary text-lg">Integration Page</h1>
-        <p>This page demonstrates working with inline comments and context-aware suggestions.</p>
-        <p className='mt-5'><b>Task:</b> Go to the source code and implement the reversed input function.</p>
-        <IntegrationTodos />
-      </div>
+      <Instructions />
       <div className='bg-gray-100 p-4 rounded-md mt-5'>
         <input
           data-testid="reverse-input"
@@ -27,6 +44,15 @@ export default function IntegrationPage() {
         </button>
         { /* Display the reversed message here. */ }
       </div>
+      <div className='mt-5 bg-gray-100 p-4 rounded-md'>
+      <h1 className="text-primary text-lg mt-5 mb-5">Completion Demo</h1>
+      <Image
+      alt='Completion GIF'
+      src={CompletionGif}
+      width={800}
+      height={600}/>
+      </div>
+   
     </div>
   );
 };

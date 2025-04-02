@@ -12,8 +12,9 @@ export default function Home() {
             className="mr-4"
           />
           <h1 className="text-3xl font-bold text-black">Welcome to GitHub Copilot Advanced</h1>
-        <p className="mb-4 text-black">
-          This project is a hands-on guide to mastering GitHub Copilot's capabilities. Explore the examples in the sidebar to learn how Copilot can enhance your development workflow.
+        <p className="mb-4 text-black mt-5">
+          This project is a hands-on guide to mastering GitHub Copilot's capabilities. 
+          Explore the examples in the sidebar to learn how Copilot can enhance your development workflow.
         </p>
         <p className="mb-4 text-black">
           Each example demonstrates a specific use case, such as integrating Copilot into your daily workflow, writing code faster, improving developer experience, reducing boilerplate, and onboarding onto new codebases.

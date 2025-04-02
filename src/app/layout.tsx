@@ -33,8 +33,11 @@ export default function RootLayout({
       >
         <div className="antialiased grid grid-cols-[250px_1fr] min-h-screen bg-white-100">
           <aside className="bg-primary text-white p-6 border-r border-gray-300">
-            <h2 className="text-xl font-bold mb-6">Examples</h2>
+            <h2 className="text-xl font-bold mb-6">Modules</h2>
             <nav className="flex flex-col gap-4">
+              <Link href="/" className="hover:underline">
+                Home
+              </Link>
               <Link href="/integration" className="hover:underline">
                 1. Integration
               </Link>
