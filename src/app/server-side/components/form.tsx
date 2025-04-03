@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent  } from 'react';
+import { FormEvent, useState } from 'react';
 
 export const SignUpForm = () => {
 const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -8,9 +8,9 @@ const [isLoading, setIsLoading] = useState<boolean>(false);
 const [success, setSuccess] = useState<string | null>(null);
  
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setIsLoading(true)
-    setError(null) // Clear previous errors when a new request starts
+    event.preventDefault();
+    setIsLoading(true);
+    setError(null);
  
     try {
         const formData = {
@@ -28,18 +28,17 @@ const [success, setSuccess] = useState<string | null>(null);
         body: JSON.stringify(formData),
       })
   
-      // Handle response if necessary
+      setIsLoading(false);
+
       const data = await response.json()
       console.log(data);
       if (!response.ok) {
         throw new Error(data || 'An error occurred while validating the form.');
       }else {
-        // Handle successful validation (e.g., redirect to another page or show success message)
         setSuccess(data.message || 'Form submitted successfully!');
       }
 
-    } catch (error: any) {
-      // Capture the error message to display to the user
+    } catch (error: unknown) {
       setError(JSON.stringify(error))
       console.error(error)
     } finally {
@@ -99,6 +98,7 @@ const [success, setSuccess] = useState<string | null>(null);
 
           <button 
             type="submit" 
+            disabled={isLoading}
             data-testid="submit-button"
             className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50"
           >

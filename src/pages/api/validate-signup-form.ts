@@ -1,8 +1,9 @@
 'use server';
 
 import type { NextApiRequest, NextApiResponse } from 'next'
+
 import { users } from './users';
- 
+
 export const config = {
   api: {
       bodyParser: true, // Enable body parsing for JSON data
@@ -25,7 +26,8 @@ export default async function handler(
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const { username, email, password, confirmPassword } = req.body;
+  const { username, email } = req.body;
+
 
   users.push({
     username,
