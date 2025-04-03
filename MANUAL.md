@@ -116,7 +116,45 @@ Ask GitHub Copilot Chat:
 
 **Learning:** This is where Copilot becomes a teammate, not a tool.
 
-## 8. Developer Challenge (Optional)
+## 8. Advanced Features
+
+### Different Models (GPT-4, Claude etc.) 
+"Want to switch brains behind Copilot?"
+
+Open Copilot Chat and Click the dropdown at the bottom (or where a model is displayed)
+
+Choose between models like (03.04.25):
+- Claude 3.5 Sonnet (Preview) : Writing, summarizing, analyzing documents or chat-style input.
+- GPT-4.5 (Preview) : Accurate Q&A, coding help, creative tasks.
+- GPT-4o : Your best all-rounder: coding, chat, content, reasoning.
+- o1 (Preview) : Use for curiosity or performance testing
+
+**Pro tip:** If you’re not happy with the response - try different models.
+
+### Generating Custom Scripts & Tools (Shell, SQL, YAML)
+You can also use Copilot like a script generator. Try asking:
+```
+> Generate a bash script that backs up all `.ts` files into a zip
+```
+or
+```
+> Create a GitHub Actions workflow that lints, tests, and builds this project
+```
+
+### Dev SideKick
+
+Copilot becomes more powerful when you treat it like a junior dev or brainstorming partner. 
+
+Try prompts like:
+
+```
+> Draft a README for this project
+```
+```
+> How would you optimize this API endpoint?
+```
+
+## Developer Challenge (Optional)
 "Your turn!"
 
 Add a feature that blocks user submission unless the address ends with ```@example.com.```
