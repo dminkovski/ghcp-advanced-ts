@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, ReactNode, useEffect } from 'react';
 
 /**
@@ -44,7 +46,7 @@ export const TodoItem = ({ children, onCompletionChange }: TodoItemProps) => {
   );
 };
 
-export const TodoList = ({ onAllCompletedChange, children }: TodoListProps) => {
+const TodoList = ({ onAllCompletedChange, children }: TodoListProps) => {
   const [completedStates, setCompletedStates] = useState<boolean[]>([]);
 
   useEffect(() => {
@@ -84,3 +86,26 @@ export const TodoList = ({ onAllCompletedChange, children }: TodoListProps) => {
     </div>
   );
 };
+
+export const Todos = ({children, completedMessage = "Congratulations! All todos are completed."}: {children: any, completedMessage?: any}) => {
+    const [allTodosCompleted, setAllTodosCompleted] = useState<boolean>(false);
+  
+    const handleAllCompletedChange = (allCompleted: boolean) => {
+      setAllTodosCompleted(allCompleted);
+    };
+
+    return (
+    <div>
+        <div className='bg-blue-100 p-8 rounded-md mt-5 text-md'>
+            <TodoList onAllCompletedChange={handleAllCompletedChange}>
+                {children}
+            </TodoList>
+        </div>
+        {allTodosCompleted && (
+          <p style={{ marginTop: '20px', color: 'green' }}>
+            { completedMessage }
+          </p>
+        )}
+    </div>
+    );
+}

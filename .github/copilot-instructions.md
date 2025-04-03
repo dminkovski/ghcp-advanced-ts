@@ -10,6 +10,7 @@ Follow these instructions to ensure your responses are helpful and relevant.
 1. **Code Quality**:
    - Ensure generated code is syntactically correct and adheres to TypeScript best practices.
    - Avoid generating insecure or inefficient code.
+   - Use only "https://nextjs.org" as the official documentation and source for NextJS Code Suggestions.
 2. **Testing**:
    - When asked, generate unit tests using Jest and Cypress E2E, following the Arrange-Act-Assert pattern.
    - Ensure tests are comprehensive and cover edge cases as well.

@@ -1,5 +1,9 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 
@@ -16,7 +20,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "GitHub Copilot Advanced",
   description: "Learn how to use GitHub Copilot effectively",
 };
@@ -26,6 +30,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const activePathname = usePathname();
+
   return (
     <html lang="en">
       <body
@@ -35,23 +41,45 @@ export default function RootLayout({
           <aside className="bg-primary text-white p-6 border-r border-gray-300">
             <h2 className="text-xl font-bold mb-6">Modules</h2>
             <nav className="flex flex-col gap-4">
-              <Link href="/" className="hover:underline">
+              <Link
+                href="/"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/",
+                })}
+              >
                 Home
               </Link>
-              <Link href="/server-side" className="hover:underline">
+              <Link
+                href="/server-side"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/server-side",
+                })}
+              >
                 1. Server Side
               </Link>
-              <Link href="/client-side" className="hover:underline">
+              <Link
+                href="/client-side"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/client-side",
+                })}
+              >
                 2. Client Side
               </Link>
-              <Link href="/dev-experience" className="hover:underline">
-                3. Developer Experience
+              <Link
+                href="/architecture"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/architecture",
+                })}
+              >
+                3. Architecture
               </Link>
-              <Link href="/boilerplate" className="hover:underline">
-                4. Boilerplate Reduction
-              </Link>
-              <Link href="/onboarding" className="hover:underline">
-                5. Onboarding
+              <Link
+                href="/code-analysis"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/code-analysis",
+                })}
+              >
+                4. Code Analysis
               </Link>
             </nav>
           </aside>

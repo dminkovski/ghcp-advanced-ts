@@ -1,17 +1,24 @@
 'use client'
 
 import React, { useState } from 'react';
-import IntegrationTodos from './components/todos';
 import CompletionGif from "@public/ghcp-comment-completion.gif";
 import Image from 'next/image';
+import { Todos, TodoItem } from '@/components/todo';
+import CodeBlock from '@/components/code-block';
 
 const Instructions = () => {
   return (
     <div>
-      <h1 className="text-primary text-lg mt-5">Integration in the IDE</h1>
-      <p>Go to the source code and implement the reversed input function in <span className='bg-dark font-mono text-sm text-gray-500'>src/app/integration/page.tsx</span></p>
+      <h1 className="text-primary text-lg">GithubCopilot leverages your Context</h1>
+      <p>Go to the source code and implement the handleSearch function in <CodeBlock>src/app/integration/page.tsx</CodeBlock></p>
       <p className='mt-3 text-md font-bold'>Use comments and try to use autocomplete to achieve the desired outcome.</p>
-      <IntegrationTodos /> 
+      <Todos completedMessage={<div> Congratulations! All todos are completed. <br /><span>Run <CodeBlock>`npm test client-side`</CodeBlock> in VS Code Terminal to check your implementation.</span></div>}>
+          <TodoItem>1. Create a state variable to hold the search query. <CodeBlock>// State variable to hold the search query</CodeBlock></TodoItem>
+          <TodoItem>2. Create a function to handle search input changes. <CodeBlock>// Function to handle search input changes</CodeBlock></TodoItem>
+          <TodoItem>3. Create a function to fetch search results based on the query. <CodeBlock>// Function to fetch search results</CodeBlock></TodoItem>
+          <TodoItem>4. Display the search results dynamically. <CodeBlock>// Display search results</CodeBlock></TodoItem>
+          <TodoItem>5. Add error handling for failed search requests. <CodeBlock>// Handle errors gracefully</CodeBlock></TodoItem>
+        </Todos> 
     </div>
   );
 };
