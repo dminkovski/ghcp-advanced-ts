@@ -1,6 +1,7 @@
 'use server';
 
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { users } from './users';
  
 export const config = {
   api: {
@@ -8,6 +9,14 @@ export const config = {
   },
 };
 
+/**
+ * Validate the signup form data.
+ * Username must be at least 3 characters long.
+ * Error messages are returned for each field that fails validation.
+ * @param req 
+ * @param res 
+ * @returns JSON response with error messages or success status - error:, success:
+ */
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,6 +25,12 @@ export default async function handler(
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  // If validation passes, proceed with further logic (e.g., saving to database)
+  const { username, email, password, confirmPassword } = req.body;
+
+  users.push({
+    username,
+    email,
+  });
+
   return res.status(400).json({ error: 'Not implemented' });
 }

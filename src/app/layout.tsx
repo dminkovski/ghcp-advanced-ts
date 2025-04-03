@@ -38,11 +38,11 @@ export default function RootLayout({
               <Link href="/" className="hover:underline">
                 Home
               </Link>
-              <Link href="/integration" className="hover:underline">
-                1. Integration
+              <Link href="/server-side" className="hover:underline">
+                1. Server Side
               </Link>
-              <Link href="/faster-code" className="hover:underline">
-                2. Faster Code
+              <Link href="/client-side" className="hover:underline">
+                2. Client Side
               </Link>
               <Link href="/dev-experience" className="hover:underline">
                 3. Developer Experience
