@@ -1,5 +1,5 @@
-import Image from "next/image";
 import copilotImage from "@public/copilot.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
           Each example demonstrates a specific use case, such as integrating Copilot into your daily workflow, writing code faster, improving developer experience, reducing boilerplate, and onboarding onto new codebases.
         </p>
         <p className="text-black">
-          Follow the links to dive into each scenario and see how Copilot can transform your coding experience.
+          Follow the links on the left to dive into each scenario and see how Copilot can transform your coding experience.
         </p>
     </div>
   );

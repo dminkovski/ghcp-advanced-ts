@@ -28,7 +28,6 @@ export default async function handler(
 
   const { username, email } = req.body;
 
-
   users.push({
     username,
     email,

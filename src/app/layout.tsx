@@ -1,14 +1,13 @@
 "use client";
 
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import clsx from "clsx";
-import { usePathname } from "next/navigation";
-
-import Link from "next/link";
-
 import "./globals.css";
 import "./colors.css";
+
+import clsx from "clsx";
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +18,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const metadata: Metadata = {
-  title: "GitHub Copilot Advanced",
-  description: "Learn how to use GitHub Copilot effectively",
-};
 
 export default function RootLayout({
   children,
@@ -80,6 +74,14 @@ export default function RootLayout({
                 })}
               >
                 4. Code Analysis
+              </Link>
+              <Link
+                href="/advanced-control-flow"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/advanced-control-flow",
+                })}
+              >
+                5. Advanced Control Flow
               </Link>
             </nav>
           </aside>

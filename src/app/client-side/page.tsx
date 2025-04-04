@@ -1,23 +1,24 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import React, { useState } from 'react';
+import CodeBlock from '@/components/code-block';
+import { TodoItem, Todos } from '@/components/todo';
 import CompletionGif from "@public/ghcp-comment-completion.gif";
 import Image from 'next/image';
-import { Todos, TodoItem } from '@/components/todo';
-import CodeBlock from '@/components/code-block';
+import React, { useState } from 'react';
 
 const Instructions = () => {
   return (
     <div>
       <h1 className="text-primary text-lg">GithubCopilot leverages your Context</h1>
       <p>Go to the source code and implement the handleSearch function in <CodeBlock>src/app/integration/page.tsx</CodeBlock></p>
-      <p className='mt-3 text-md font-bold'>Use comments and try to use autocomplete to achieve the desired outcome.</p>
+      <p className='mt-3 text-md font-bold'>Use comments and try to use autocomplete to achieve the desired outcome:</p>
+      <CodeBlock>{'// OnChange save searchQuery'}</CodeBlock>
       <Todos completedMessage={<div> Congratulations! All todos are completed. <br /><span>Run <CodeBlock>`npm test client-side`</CodeBlock> in VS Code Terminal to check your implementation.</span></div>}>
-          <TodoItem>1. Create a state variable to hold the search query. <CodeBlock>// State variable to hold the search query</CodeBlock></TodoItem>
-          <TodoItem>2. Create a function to handle search input changes. <CodeBlock>// Function to handle search input changes</CodeBlock></TodoItem>
-          <TodoItem>3. Create a function to fetch search results based on the query. <CodeBlock>// Function to fetch search results</CodeBlock></TodoItem>
-          <TodoItem>4. Display the search results dynamically. <CodeBlock>// Display search results</CodeBlock></TodoItem>
-          <TodoItem>5. Add error handling for failed search requests. <CodeBlock>// Handle errors gracefully</CodeBlock></TodoItem>
+          <TodoItem>1. Write a function to handle search input changes. <CodeBlock>{'// OnChange save searchQuery'}</CodeBlock></TodoItem>
+          <TodoItem>2. Write a function to fetch search results based on the query. <CodeBlock>{'// Fetch results from API '}</CodeBlock></TodoItem>
+          <TodoItem>3. Display the search results dynamically. <CodeBlock>{'// Display search results'}</CodeBlock></TodoItem>
+          <TodoItem>4. Add error handling for failed search requests. <CodeBlock>{'// Handle error and display it'}</CodeBlock></TodoItem>
         </Todos> 
     </div>
   );
@@ -38,10 +39,10 @@ export default function ClientSidePage() {
 
   // Function to handle input change
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-   
+
   };
   // Function to handle search button click
-  const handleSearch = async () => {
+  const handleSearch = async () => {  
 
   };
 
