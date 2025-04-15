@@ -3,9 +3,10 @@
 import "./globals.css";
 import "./colors.css";
 
+import image from "@public/image.png";
 import clsx from "clsx";
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -33,7 +34,9 @@ export default function RootLayout({
       >
         <div className="antialiased grid grid-cols-[250px_1fr] min-h-screen bg-white-100">
           <aside className="bg-primary text-white p-6 border-r border-gray-300">
-            <h2 className="text-xl font-bold mb-6">Modules</h2>
+            <h2 className="text-xl font-bold mb-6">
+              <Image alt="Logo" src={image} width={100} height={100} className="inline-block mr-2" />
+            </h2>
             <nav className="flex flex-col gap-4">
               <Link
                 href="/"

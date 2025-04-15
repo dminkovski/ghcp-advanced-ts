@@ -11,7 +11,7 @@ export default function Home() {
             height={50}
             className="mr-4"
           />
-          <h1 className="text-3xl font-bold text-black">Welcome to GitHub Copilot Advanced</h1>
+          <h1 className="text-3xl font-bold text-black">Welcome to GitHub Copilot Intermediate/Advanced</h1>
         <p className="mb-4 text-black mt-5">
           This project is a hands-on guide to mastering GitHub Copilot's capabilities. 
           Explore the examples in the sidebar to learn how Copilot can enhance your development workflow.

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 
 /**
  * Todo Component
@@ -28,7 +28,7 @@ export const TodoItem = ({ children, onCompletionChange }: TodoItemProps) => {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 text-l">
       <input
       type="checkbox"
       checked={completed}

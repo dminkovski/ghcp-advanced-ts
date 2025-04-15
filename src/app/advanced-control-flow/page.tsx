@@ -11,10 +11,7 @@ export default function Page() {
       <p>Using GitHub Copilot, you can drive the entire GitHub Copilot experience and tailor it to your workflows.</p>
       <p className='mt-3 mb-5 text-md font-bold'>Leverage flow-control prompts.</p>
       <p>In this example, we will explore how to leverage flow-control prompts to achieve our goals.</p>
-      <Todos>
-        <TodoItem>1. Open up Visual Studio Code.</TodoItem>
-        <TodoItem>2. Ask GitHub Copilot Chat and apply advanced prompting.</TodoItem>
-      </Todos>
+      <h2 className="text-primary text-lg mt-5">Prompt Scenarios</h2>
       <p className='mt-3 text-md font-bold'>Try the following prompt with <CodeBlock>src/app/code-analysis/components/complex.ts</CodeBlock> file attached:</p>
       <CodeBlock>{"Let's refactor this step by step. Start by summarizing the code, and wait for me to confirm the next step."}</CodeBlock>
       <p className='mt-3 text-md font-bold'>Multiple Options for Design Decisions:</p>
@@ -25,6 +22,14 @@ export default function Page() {
       <CodeBlock>{"Let's do this in steps. First summarize the purpose of the function. Then propose improvements one at a time, waiting for my go-ahead each time."}</CodeBlock>
       <p className='mt-3 text-md font-bold'>Code Review and PR Preparation:</p>
       <CodeBlock>{"You are now acting as a code reviewer. What questions would you ask before approving this PR?"}</CodeBlock>
+      <Todos>
+        <TodoItem>1. Open up Visual Studio Code.</TodoItem>
+        <TodoItem>2. Open GitHub Copilot Chat and try the first prompt.</TodoItem>
+        <TodoItem>3. Try: Multiple Options for Design Decisions.</TodoItem>
+        <TodoItem>4. Test Driven Development.</TodoItem>
+        <TodoItem>5. Prompt Flow for Feature Development.</TodoItem>
+        <TodoItem>6. Code Review and PR Preparation.</TodoItem>
+      </Todos>
     </div>
     </div>
   );
