@@ -15,7 +15,7 @@ export default function Page() {
         <TodoItem>1. Open up Visual Studio Code.</TodoItem>
         <TodoItem>2. Ask GitHub Copilot Chat and apply advanced prompting.</TodoItem>
       </Todos>
-      <p className='mt-3 text-md font-bold'>Try the following prompt with <CodeBlock>complex.ts</CodeBlock> file attached:</p>
+      <p className='mt-3 text-md font-bold'>Try the following prompt with <CodeBlock>src/app/code-analysis/components/complex.ts</CodeBlock> file attached:</p>
       <CodeBlock>{"Let's refactor this step by step. Start by summarizing the code, and wait for me to confirm the next step."}</CodeBlock>
       <p className='mt-3 text-md font-bold'>Multiple Options for Design Decisions:</p>
       <CodeBlock>{"Give me 3 different approaches to implement a login function. Briefly explain the trade-offs for each."}</CodeBlock>

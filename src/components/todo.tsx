@@ -102,9 +102,9 @@ export const Todos = ({children, completedMessage = "Congratulations! All todos 
             </TodoList>
         </div>
         {allTodosCompleted && (
-          <p style={{ marginTop: '20px', color: 'green' }}>
+          <div style={{ marginTop: '20px', color: 'green' }}>
             { completedMessage }
-          </p>
+          </div>
         )}
     </div>
     );
