@@ -1,4 +1,4 @@
-# GitHub Copilot Advanced
+# GitHub Copilot Intermediate/Advanced
 
 Welcome to the GitHub Copilot VSCode Project! This guide will walk you through hands-on examples to quickly master Copilot's capabilities. 
 The project is divided into several scenarios—each designed to show you tangible benefits of using Copilot.
@@ -31,6 +31,10 @@ Notice the **src/** folder that contains scenarios for server-side rendering, cl
 ## 4. Code Analysis Prompting
 
 - Experiment with Copilot Chat for improving code quality and utilize best practices.
+
+## 5. Advanced Control Flow
+
+- Experiment with Copilot Chat to achieve better results and human in the loop interactions.
 
 ## Next Steps
 
