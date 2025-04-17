@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 'use client'
 
 import CodeBlock from '@/components/code-block';
@@ -11,7 +14,7 @@ const Instructions = () => {
   return (
     <div>
       <h1 className="text-primary text-lg">GithubCopilot leverages your Context</h1>
-      <p>Go to the source code and implement the handleSearch function in <CodeBlock>src/app/integration/page.tsx</CodeBlock></p>
+      <p>Go to the source code and implement the handleSearch function in <CodeBlock>src/app/client-side/page.tsx</CodeBlock></p>
       <p className='mt-3 text-md font-bold'>Use comments and try to use autocomplete to achieve the desired outcome:</p>
       <CodeBlock>{'// OnChange save searchQuery'}</CodeBlock>
       <Todos completedMessage={<div> Congratulations! All todos are completed. <br /><span>Run <CodeBlock>`npm test client-side`</CodeBlock> in VS Code Terminal to check your implementation.</span></div>}>

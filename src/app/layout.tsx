@@ -63,12 +63,20 @@ export default function RootLayout({
                 2. Client Side
               </Link>
               <Link
+                href="/prompt-engineering"
+                className={clsx("hover:underline", {
+                  "font-bold": activePathname === "/prompt-engineering",
+                })}
+              >
+                3. Prompt Engineering
+              </Link>
+              <Link
                 href="/architecture"
                 className={clsx("hover:underline", {
                   "font-bold": activePathname === "/architecture",
                 })}
               >
-                3. Architecture
+                4. Architecture
               </Link>
               <Link
                 href="/code-analysis"
@@ -76,7 +84,7 @@ export default function RootLayout({
                   "font-bold": activePathname === "/code-analysis",
                 })}
               >
-                4. Code Analysis
+                5. Code Analysis
               </Link>
               <Link
                 href="/advanced-control-flow"
@@ -84,7 +92,7 @@ export default function RootLayout({
                   "font-bold": activePathname === "/advanced-control-flow",
                 })}
               >
-                5. Advanced Control Flow
+                6. Advanced Control Flow
               </Link>
             </nav>
           </aside>
