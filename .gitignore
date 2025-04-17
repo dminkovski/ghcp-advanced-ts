@@ -70,3 +70,6 @@ package-lock.json
 .next/
 # Ignore build output
 out/
+
+/mcp/node_modules
+/mcp/package-lock.json
