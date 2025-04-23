@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/typescript-node:18",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
+      "version": "lts"
     }
   },
   "customizations": {
@@ -17,7 +17,10 @@
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-typescript-next",
         "ms-playwright.playwright",
-        "firsttris.vscode-jest-runner"
+        "firsttris.vscode-jest-runner",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "GitHub.copilot-workspace"
       ]
     }
   },
