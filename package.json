@@ -11,6 +11,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.2",
     "clsx": "^2.1.1",
     "next": "15.2.4",
     "react": "^19.0.0",

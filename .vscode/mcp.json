@@ -1,4 +1,9 @@
 {
+  "inputs": [
+    {
+      "type": "promptString"
+    }
+  ],
   "servers": {
     "node-mcp-server": {
       "type": "stdio",
