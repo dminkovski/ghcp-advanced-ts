@@ -24,9 +24,9 @@ CTRL + SHIFT + P and "Chat: Run Prompt"
 ## 11. Using MCP (Model Context Protocol)
 MCP allows Copilot to use tools that you define and access information outside its model.
 
-Use MCP in Agent Mode:
+Use MCP in** Agent Mode:**
 ```
-> "Get my remove project todos" -> tool calling "get_todos"
+> "Get my project todos" -> tool calling "get_todos"
 ```
 
 
@@ -39,7 +39,7 @@ The implementation can be found in: [**mcp/index.js**](./mcp//index.js)
 
 
 ## 12. GitHub Copilot Workspace
-Run Task on Repo:
+Run Task on GItHub Repo (github.com):
 
 "Lets think about a better routing that will make sure the previous page tasks / todos have been finished before allowing to move on."
 
@@ -48,9 +48,6 @@ GitHub Copilot Vision.
 
 Drag and Drop the image of an architecture and ask questions about it:
 [project-architecture-diagram.png](./public/project-architecture-diagram.png)
-
-
-Use MCP in Agent Mode:
 ```
 > List the Microservices and their relationships.
 ```
